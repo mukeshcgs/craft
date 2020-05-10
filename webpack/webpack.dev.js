@@ -1,10 +1,6 @@
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
-var webpack = require('webpack');
-var CompressionPlugin = require('compression-webpack-plugin');
-var Visualizer = require('webpack-visualizer-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+//  const merge = require('webpack-merge');
+//  const common = require('./webpack.common.js');
+
 //  module.exports = merge(common, {
 //   mode: 'development',
 //    devtool: 'inline-source-map',
@@ -12,10 +8,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 //      contentBase: './dist'
 //    }
 //  });
+
+const webpack = require('webpack');
+
+const commonPaths = require('./paths');
+
 module.exports = {
   mode: 'development',
-  devtool: "eval",
-  entry: './src/js/index.js',
+  devtool: 'inline-source-map',
+  output: {
+    filename: '[name].js',
+    path: commonPaths.outputPath,
+    chunkFilename: '[name].js',
+  },
   module: {
     rules: [
       {
@@ -37,15 +42,10 @@ module.exports = {
       },
     ],
   },
-  output: {
-    path: __dirname + "src/js/",
-    filename: "index.min.js"
-  },
   devServer: {
-    port: 3000,
-    historyApiFallback: true,
+    contentBase: commonPaths.outputPath,
+    compress: true,
+    hot: true,
   },
-  plugins: [
-    new ExtractTextPlugin({ filename: 'styles.css', disable: false, allChunks: true }),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 };

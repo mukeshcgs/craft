@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom"
 
 import App from "./components/App"
 import store from "./store/Store"
-import '../css/main.scss';
+// import '../css/main.scss';
 
 const app = document.getElementById('app')
 if (process.env.NODE_ENV !== 'production') {

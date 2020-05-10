@@ -1,12 +1,11 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-var CompressionPlugin = require('compression-webpack-plugin');
-var Visualizer = require('webpack-visualizer-plugin');
+const history = require('connect-history-api-fallback');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-
+  
   entry: {
     app: './src/js/index.js'
   },
