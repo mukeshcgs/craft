@@ -37,7 +37,7 @@ class ProjectsPage extends Component {
 }
 
 ProjectsPage.PropTypes = {
-  pages: React.PropTypes.array.isRequired,
+  pages: PropTypes.array.isRequired,
 };
 
 function mapStateToProps(state) {

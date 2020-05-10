@@ -75,9 +75,9 @@ class AboutPage extends Component {
     }
 }
 AboutPage.PropTypes = {
-    projects: React.PropTypes.array.isRequired,
-    getProjects: React.PropTypes.func.isRequired,
-    projectIndex: React.PropTypes.array.isRequired
+    projects: PropTypes.array.isRequired,
+    getProjects: PropTypes.func.isRequired,
+    projectIndex: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state) {

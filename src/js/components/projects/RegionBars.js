@@ -47,7 +47,7 @@ class RegionBars extends Component {
     }
 }
 
-RegionBars.PropTypes = { pages: React.PropTypes.array.isRequired, };
+RegionBars.PropTypes = { pages: PropTypes.array.isRequired, };
 
 function mapStateToProps(state) { return { pages: state.pages } }
 

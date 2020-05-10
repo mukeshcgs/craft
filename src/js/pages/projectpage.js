@@ -83,7 +83,7 @@ function mapDispatchToProps(dispatch) {
 //export default connect(mapDispatchToProps)(ProjectPage);
 
 ProjectPage.PropTypes = {
-    pages: React.PropTypes.array.isRequired,
+    pages: PropTypes.array.isRequired,
 };
 
 function mapStateToProps(state) {

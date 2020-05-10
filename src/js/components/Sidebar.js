@@ -66,8 +66,8 @@ class Sidebar extends Component {
 }
 
 Sidebar.PropTypes = {
-    pages: React.PropTypes.array.isRequired,
-    _toggle: React.PropTypes.func.isRequired
+    pages: PropTypes.array.isRequired,
+    _toggle: PropTypes.func.isRequired
 
 };
 

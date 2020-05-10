@@ -48,7 +48,7 @@ class RegionPiaChart extends Component {
     }
 }
 
-RegionPiaChart.PropTypes = { pages: React.PropTypes.array.isRequired, };
+RegionPiaChart.PropTypes = { pages: PropTypes.array.isRequired, };
 
 function mapStateToProps(state) { return { pages: state.pages } }
 

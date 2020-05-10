@@ -50,7 +50,7 @@ class RegionTable extends Component {
     }
 }
 
-RegionTable.PropTypes = { pages: React.PropTypes.array.isRequired, };
+RegionTable.PropTypes = { pages: PropTypes.array.isRequired, };
 
 function mapStateToProps(state) { return { pages: state.pages } }
 

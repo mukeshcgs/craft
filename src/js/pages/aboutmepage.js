@@ -63,7 +63,7 @@ class AboutMePage extends Component {
         </div >)
     }
 }
-AboutMePage.PropTypes = { pages: React.PropTypes.array.isRequired, };
+AboutMePage.PropTypes = { pages: PropTypes.array.isRequired, };
 
 function mapStateToProps(state) { return { pages: state.pages } }
 

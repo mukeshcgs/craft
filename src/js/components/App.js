@@ -1,6 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
@@ -122,9 +123,9 @@ class App extends React.Component {
 }
 
 App.PropTypes = {
-  pages: React.PropTypes.array.isRequired,
-  getPages: React.PropTypes.func.isRequired,
-  // getRegionData: React.PropTypes.func.isRequired
+  pages: PropTypes.array.isRequired,
+  getPages: PropTypes.func.isRequired,
+  // getRegionData: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {
