@@ -2,11 +2,9 @@
   "name": "react-wordpress",
   "version": "0.0.1",
   "description": "Covid19 Dashboard",
-  "version": "1.0.0",
-
   "main": "webpack.config.js",
   "engines": {
-    "node": "12.16.x"
+    "node": "12.16.0"
   },
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --open --config webpack.dev.js",
