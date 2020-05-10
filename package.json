@@ -4,7 +4,7 @@
   "description": "Covid19 Dashboard",
   "main": "webpack.config.js",
   "engines": {
-    "node": "12.16.0"
+    "node": "10.10.0"
   },
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --open --config webpack.dev.js",
