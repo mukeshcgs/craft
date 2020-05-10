@@ -3,6 +3,7 @@ var path				= require('path');
 var HtmlWebpackPlugin 	= require('html-webpack-plugin');
 
 module.exports = {	
+	mode: 'production',
 	devtool: 'source-map',
 	devServer: {
 		historyApiFallback: true, // This will make the server understand "/some-link" routs instead of "/#/some-link"
