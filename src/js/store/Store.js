@@ -31,7 +31,7 @@ import { Router, Route, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import { routerMiddleware, push } from 'react-router-redux'
 
-import reducer from "../reducers"
+import reducer from "../reducers/Index"
 
 //const middleware = applyMiddleware(promise(), thunk, createLogger())
 const middleware = applyMiddleware(thunk, logger)

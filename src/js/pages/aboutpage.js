@@ -5,7 +5,7 @@ import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import ReactDOM from "react-dom"
 import axios from 'axios'
 
-import { getProjects } from "./actions/projects/projectActions";
+import { getProjects } from "../actions/projects/ProjectActions";
 import ProjectPage from "./projectpage";
 
 class AboutPage extends Component {
