@@ -1,55 +1,76 @@
-const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const eslint = require('eslint');
+const webpack = require('webpack');
+const convert = require('koa-connect');
 const history = require('connect-history-api-fallback');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const commonPaths = require('./paths');
 
 module.exports = {
-  
-  entry: {
-    app: './src/js/index.js'
-  },
+  entry: commonPaths.entryPath,
   module: {
-    rules: [{
-      test: /\.jsx?$/,
-      exclude: /(node_modules|bower_components)/,
-      loader: 'babel-loader',
-      query: {
-        presets: ['react', 'es2015', 'stage-0'],
-        plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
-      }
-    },
-    {
-      test: /\.scss$/,
-      exclude: /node_modules/,
-      use: ExtractTextPlugin.extract({
-        fallback: "style-loader",
-        use: [{
-          loader: "css-loader"
-        }, {
-          loader: "sass-loader"
-        }],
-      })
-    },
-    {
-      test: /\.(png|svg|jpg|gif)$/,
-      use: [
-        'file-loader'
-      ]
-    },
-    {
-      test: /\.(woff|woff2|eot|ttf|otf)$/,
-      use: [
-        'file-loader'
-      ]
-    }
-    ]
+    rules: [
+      // {
+      //   enforce: 'pre',
+      //   test: /\.(js|jsx)$/,
+      //   loader: 'eslint-loader',
+      //   exclude: /(node_modules)/,
+      //   options: {
+      //     // formatter: eslint.CLIEngine.getFormatter('stylish'),
+      //     emitWarning: process.env.NODE_ENV !== 'production',
+      //   },
+      // },
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        exclude: /(node_modules)/,
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: commonPaths.imagesFolder,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff2|ttf|woff|eot)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: commonPaths.fontsFolder,
+            },
+          },
+        ],
+      },
+    ],
   },
-  devServer: {
-    historyApiFallback: true,
+  serve: {
+    add: app => {
+      app.use(convert(history()));
+    },
+    content: commonPaths.entryPath,
+    dev: {
+      publicPath: commonPaths.outputPath,
+    },
+    open: true,
   },
-
+  resolve: {
+    modules: ['src', 'node_modules'],
+    extensions: ['*', '.js', '.jsx', '.css', '.scss'],
+  },
   plugins: [
+    new webpack.ProgressPlugin(),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'async',
+    }),
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ['dist']
     }),
@@ -57,11 +78,6 @@ module.exports = {
       template: '!html-webpack-plugin/lib/loader!src/index.html',
       filename: 'index.html'
     }),
-    new ExtractTextPlugin({ filename: 'styles.css', disable: false, allChunks: true }),
 
   ],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  }
 };

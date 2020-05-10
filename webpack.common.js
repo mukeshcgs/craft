@@ -11,7 +11,8 @@ module.exports = {
     app: './src/js/index.js'
   },
   module: {
-    rules: [{
+    rules: [
+      {
       test: /\.jsx?$/,
       exclude: /(node_modules|bower_components)/,
       loader: 'babel-loader',

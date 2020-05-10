@@ -4,10 +4,13 @@
   "description": "Covid19 Dashboard",
   "main": "webpack.config.js",
   "engines": {
-    "node": "8.16.0"
+    "node": "8.16.0",
+    "npm": "6.4.1"
+
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack",
     "start1": "./node_modules/.bin/webpack-dev-server --open --config webpack.dev.js",
     "build1": "./node_modules/.bin/webpack --config webpack.prod.js",
@@ -61,6 +64,8 @@
     "datatables.net": "^1.10.15",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.5",
+    "prettier": "1.0.5",
+
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^4.3.0",
     "jquery": "^3.2.1",
@@ -69,10 +74,25 @@
     "nodemon": "^1.11.0",
     "raf": "^3.3.0",
     "resolve-url-loader": "^3.1.1",
+    "mini-css-extract-plugin": "0.9.0",
+    "babel-eslint": "10.1.0",
     "sass-loader": "8.0.2",
     "style-loader": "1.2.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack-cli": "^3.3.11"
+    "script-ext-html-webpack-plugin": "2.1.4",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "webpack-cli": "^3.3.11",
+    "koa-connect": "2.0.1",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-loader": "3.0.4",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jest": "23.10.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-watch": "6.0.1"
   },
   "proxy": "http://localhost:8080",
   "author": "",
