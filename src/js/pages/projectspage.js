@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import {PropTypes} from 'prop-types'; 
+import PropTypes from 'prop-types'; 
 
 import { connect } from "react-redux"
-import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import ReactDOM from "react-dom"
+// import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom"
+// import ReactDOM from "react-dom"
 
 import RegionBars from "../components/projects/RegionBars";
 import RegionPiaChart from "../components/projects/RegionPiaChart";
 import RegionTable from "../components/projects/RegionTable";
-import ProjectPage from "../pages/projectpage"
-import { getProjects } from "../actions/projects/projectActions";
+// import ProjectPage from "../pages/projectpage"
+// import { getProjects } from "../actions/projects/projectActions";
 
-import { Motion, spring } from 'react-motion';
+// import { Motion, spring } from 'react-motion';
 
 class ProjectsPage extends Component {
   constructor(props) {

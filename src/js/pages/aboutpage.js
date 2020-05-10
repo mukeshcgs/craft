@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types'
 import { connect } from "react-redux"
 import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import ReactDOM from "react-dom"
 import axios from 'axios'
 
-import { getProjects } from "../actions/projects/projectActions";
+import { getProjects } from "./actions/projects/projectActions";
 import ProjectPage from "./projectpage";
 
 class AboutPage extends Component {
