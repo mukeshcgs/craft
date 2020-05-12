@@ -74,7 +74,7 @@ class App extends React.Component {
       return (<h1>Loading....</h1>)
     }
 
-    return <Router basename='/Corona_tracker' history={browserHistory}>
+    return <Router basename='/' history={browserHistory}>
       <div id="mukesh" >
         <Navbar ref={img => this.logoContainer = img} />
         {/* <Sidebar /> */}
