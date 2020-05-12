@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 ReactDOM.render(
-	<BrowserRouter>
+	<BrowserRouter >
 		<Provider store={store}>
 			<App />
 		</Provider>

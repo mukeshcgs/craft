@@ -46,3 +46,13 @@ export function getProject(id) {
             })
     }
 }
+
+//Search Region
+export  function searchSimple(state = initialState, action) {
+    switch (action.type) {
+        case SEARCH_TEXT:
+            return Object.assign({}, state, {
+                searchText: action.text
+            });
+    }
+}

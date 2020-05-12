@@ -40,7 +40,7 @@ class RegionPiaChart extends Component {
 
         return (<div class="project-list-container" >
             <div class="page-heading">Virus cases by country</div>
-            <p>Increase in cases over past 24 hours — top {disAmount} countries</p>
+            {/* <p>Increase in cases over past 24 hours — top {disAmount} countries</p> */}
             <section className="graph pai-chart">
                 {this.avrRegionsBars(this.props.pages)}
             </section>

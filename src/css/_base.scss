@@ -1,9 +1,11 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: "Maison Neue", sans-serif;
+    // font-family: "Maison Neue", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 300; // font-size: 14px;
     color: $mid-gray;
+    // transition: all .3s linear 0s;
 }
 
 html {
@@ -43,12 +45,16 @@ a {
 }
 
 p {
-    font-size: 1.5rem;
-    color: #999;
-    letter-spacing: 1px;
-    font-weight: 300;
-    line-height: 1.5em;
+    // font-size: 1.5rem;
+    // color: #999;
+    // letter-spacing: 1px;
+    // font-weight: 300;
+    // line-height: 1.5em;
     margin-bottom: 2.5em;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: -.15px;
 }
 
 img {

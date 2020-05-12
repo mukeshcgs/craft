@@ -1,0 +1,211 @@
+{
+    "data": {
+        "summary": {
+            "name": "World",
+            "total_cases": 4229731,
+            "deaths": 285152,
+            "recovered": 1512902,
+            "tested": 44757489
+        },
+        "regions": {
+            "north_america": {
+                "name": "North America",
+                "total_cases": 1370999,
+                "deaths": 80870,
+                "recovered": 256910,
+                "tested": 9469905,
+                "cities": {
+                    "boston": {
+                        "name": "Boston",
+                        "deaths": "525",
+                        "recovered": "3273",
+                        "total_cases": "11,047"
+                    },
+                    "detroit": {
+                        "name": "Detroit",
+                        "deaths": "1189",
+                        "recovered": "no data",
+                        "total_cases": "9816"
+                    },
+                    "new_york": {
+                        "name": "New York",
+                        "deaths": "21,478",
+                        "recovered": "no data",
+                        "total_cases": "3,35,395"
+                    },
+                    "nj": {
+                        "name": "NJ",
+                        "deaths": "9225",
+                        "recovered": "no data",
+                        "total_cases": "1,38,532"
+                    },
+                    "toronto": {
+                        "name": "Toronto",
+                        "deaths": "578",
+                        "recovered": "5192",
+                        "total_cases": "7413"
+                    }
+                }
+            },
+            "latin_america": {
+                "name": "Latin America",
+                "total_cases": 270912,
+                "deaths": 15400,
+                "recovered": 103623,
+                "tested": 0,
+                "cities": {
+                    "brazil": {
+                        "name": "Brazil",
+                        "deaths": "11,123",
+                        "recovered": "64,957",
+                        "total_cases": "1,63,000"
+                    },
+                    "buenos_aires": {
+                        "name": "Buenos Aires",
+                        "deaths": "116",
+                        "recovered": "no data",
+                        "total_cases": "2,329"
+                    },
+                    "mexico": {
+                        "name": "Mexico",
+                        "deaths": "3,465",
+                        "recovered": "17,781",
+                        "total_cases": "35,022"
+                    },
+                    "santiago": {
+                        "name": "Santiago",
+                        "deaths": "no data",
+                        "recovered": "no data",
+                        "total_cases": "20,353"
+                    },
+                    "lima": {
+                        "name": "Lima",
+                        "deaths": "no data",
+                        "recovered": "no data",
+                        "total_cases": "43,284"
+                    }
+                }
+            },
+            "europe": {
+                "name": "Europe",
+                "total_cases": 1596824,
+                "deaths": 150927,
+                "recovered": 641505,
+                "tested": 0,
+                "cities": {
+                    "spain": {
+                        "name": "Spain",
+                        "deaths": "26,744",
+                        "recovered": "1,37,000",
+                        "total_cases": "2,27,000"
+                    },
+                    "bucharest": {
+                        "name": "Bucharest",
+                        "deaths": "31",
+                        "recovered": "no data",
+                        "total_cases": "1,519"
+                    },
+                    "düsseldorf": {
+                        "name": "Düsseldorf",
+                        "deaths": "1437",
+                        "recovered": "no data",
+                        "total_cases": "35,132"
+                    },
+                    "london": {
+                        "name": "London",
+                        "deaths": "no data",
+                        "recovered": "no data",
+                        "total_cases": "18,000"
+                    },
+                    "madrid": {
+                        "name": "Madrid",
+                        "deaths": "8,683",
+                        "recovered": "39,604",
+                        "total_cases": "64,853"
+                    },
+                    "united_kingdom": {
+                        "name": "United Kingdom",
+                        "deaths": "32,065",
+                        "recovered": "no data",
+                        "total_cases": "2,23,000"
+                    },
+                    "france": {
+                        "name": "France",
+                        "deaths": "26,380",
+                        "recovered": "56,217",
+                        "total_cases": "1,39,000"
+                    }
+                }
+            },
+            "middle_east": {
+                "name": "Middle East",
+                "total_cases": 107000,
+                "deaths": 6640,
+                "recovered": 0,
+                "tested": 0,
+                "cities": {
+                    "united_arab_emirates": {
+                        "name": "United Arab Emirates",
+                        "deaths": "198",
+                        "recovered": "4,804",
+                        "total_cases": "18,198"
+                    }
+                }
+            },
+            "india": {
+                "name": "India",
+                "total_cases": 67152,
+                "deaths": 2206,
+                "recovered": 20917,
+                "tested": 0,
+                "cities": {
+                    "mumbai": {
+                        "name": "Mumbai",
+                        "deaths": "198",
+                        "recovered": "4,804",
+                        "total_cases": "18,198"
+                    }
+                }
+            },
+            "asia": {
+                "name": "Asia",
+                "total_cases": 535807,
+                "deaths": 18999,
+                "recovered": 276629,
+                "tested": 0,
+                "cities": {
+                    "bangkok": {
+                        "name": "Bangkok",
+                        "deaths": "24",
+                        "recovered": "no data",
+                        "total_cases": "1,546"
+                    },
+                    "philippines": {
+                        "name": "Philippines",
+                        "deaths": "726",
+                        "recovered": "1,999",
+                        "total_cases": "11,086"
+                    },
+                    "shanghai": {
+                        "name": "Shanghai",
+                        "deaths": "6",
+                        "recovered": "383",
+                        "total_cases": "536"
+                    },
+                    "singapore": {
+                        "name": "Singapore",
+                        "deaths": "21",
+                        "recovered": "3225",
+                        "total_cases": "23,787"
+                    },
+                    "tokyo": {
+                        "name": "Tokyo",
+                        "deaths": "155",
+                        "recovered": "no data",
+                        "total_cases": "4810"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -33,7 +33,7 @@ class RegionTable extends Component {
 
         return (<div class="project-list-container" >
             <div class="page-heading">Virus cases by country</div>
-            <p>Increase in cases over past 24 hours — top {disAmount} countries</p>
+            {/* <p>Increase in cases over past 24 hours — top {disAmount} countries</p> */}
             <section class="region-tbl">
                 <div className="info-tbl">
                     <div class="info-row head">

@@ -4,7 +4,10 @@
 
     .project-list-container {
         // min-height: 100vh;
-        margin: 5rem 0 10rem
+        margin: 5rem 0 10rem;
+        section{
+        padding: 2rem 0 ;
+        }
     }
 
     @media (max-width: $to-small) {
@@ -37,7 +40,7 @@
     font-size: 2rem;
     // color: $white;
     font-weight: 700;
-    margin-bottom: 1rem;
+    padding-bottom: 2rem;
 
     @media (max-width: $to-small) {
         text-align: center;

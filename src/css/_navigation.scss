@@ -5,23 +5,43 @@
     // position: fixed;
     left: 0px;
     margin-bottom: 2rem;
-    border-bottom: 1px solid #cccccc;
     .logo {
         display: inline-block;
+        width: 160px;
+        padding: 10px;
     }
     ul{
         text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    border-bottom: 1px solid #cccccc;
+
         li{
+            &.logo{
+                width: 160px;
+            }
             list-style: none;
             display: inline-block;
             a{
+                font-family: Montserrat, sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: .3px;
                 padding: 1rem;
-            display: inline-block;
+                display: inline-block;
+                transition: all .3s linear 0s;
+                &:hover{
+                    color: $primary !important;
+                    transition: all .3s linear 0s;
+                }
             }
         }
     }
     @media (max-width: $to-small) {
-        position: fixed;
+        // position: fixed;
         left: 0px;
         right: 0px;
         top: 0px;

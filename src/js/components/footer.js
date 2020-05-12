@@ -7,12 +7,7 @@ import ReactDOM from "react-dom"
 export default class Footer extends Component {
   render() {
     return (<footer>
-      <ul>
-        <li><a class="" href="mailto:mukeshcgs@gmail.com">mukeshcgs@gmail.com</a></li>
-        {/* <li><a class="fb" href="facebook.com"></a></li>
-        <li><a class="tw" href="twitter.com"></a></li>
-        <li><a class="gm" href="gmail.com"></a></li> */}
-      </ul>
+      <div id="copyright">© 2020 CRAFT </div>
     </footer>)
   }
 }
