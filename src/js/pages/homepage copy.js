@@ -55,7 +55,7 @@ class HomePage extends Component {
               }
             },
             "india": {
-              "name": "Indai",
+              "name": "India",
               "total_cases": 34,
               "deaths": 26744,
               "recovered": 5675,

@@ -112,6 +112,7 @@
 
                 &:nth-child(1) {
                     color: $primary;
+                    font-weight: 500;
                 }
             }
 
@@ -156,6 +157,20 @@
             border: 1px solid #ccc;
         }
     }
+
+    @media (max-width: 768px) {
+        display: block;
+
+        .single-city-container {
+            flex: none;
+            display: flex;
+            flex-wrap: nowrap;
+
+            div {
+                flex: 1;
+            }
+        }
+    }
 }
 
 /* COUNT  */
@@ -164,6 +179,10 @@
     bottom: 10px;
     left: 0;
     right: 0;
+
+    @media (max-width: 768px) {
+        position: relative;
+    }
 }
 
 #result {
@@ -201,7 +220,7 @@
     #result>div {
         width: 100%;
         border-bottom: 1px solid rgba(112, 112, 112, 0.5);
-        padding: 19px 0px;
+        padding: 8px 0px;
     }
 }
 
@@ -244,8 +263,8 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-
-    .avr {
+    border-bottom:1px solid #ccc;
+     .avr {
         .c-name {
             position: absolute;
             width: 100%;
@@ -255,7 +274,9 @@
         }
 
         .c-per {
-            color: #330867;
+            color: #ffffff;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
     }
 
@@ -263,7 +284,7 @@
         position: relative;
         // color: #ffffff;
         // flex: 1;
-        padding: 1rem 1rem 0rem 1rem;
+        padding: 0.5rem 1rem 0rem 1rem;
         border-radius: 3px;
         background: rgb(0, 132, 255);
         background: linear-gradient(0deg, rgba(0, 132, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
@@ -295,6 +316,7 @@
                 left: 0;
                 bottom: -30px;
                 text-align: center;
+                color: #000000;
             }
         }
 
@@ -308,11 +330,71 @@
         }
 
         @media (max-width: $to-small) {
+            border-bottom: 0px solid #ccc;
+            .avr {
+                .c-name {
+                    transform-origin: 0 0;
+                    transform: rotate(0deg);
+                    left: 5px;
+                    top: -20px;
+                    font-size: 1.5rem;
+                }
+
+                .c-per {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &.india {
+        .avr {
             .c-name {
-            transform-origin: 0 0;
-            transform: rotate(0deg);
-            left: 5px;
-            top: -2px;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: -20px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            .c-per {
+                // color: #000000;
+                // font-weight: 500;
+                // letter-spacing: 1px;
+                // position: absolute;
+                // bottom: -5px;
+                color: #000;
+                font-weight: 500;
+                letter-spacing: 1px;
+                position: absolute;
+                bottom: -30px;
+                text-align: center;
+                width: 100%;
+                left: 0px;
+            }
+        }
+
+        .avr>div {
+            position: relative;
+            // padding: 0.3rem;
+            min-width: 1rem;
+            border-radius: 3px;
+            background: rgb(0, 132, 255);
+            background: linear-gradient(0deg, rgba(0, 132, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
+        }
+
+        @media (max-width: $to-small) {
+
+            // display: block;
+            .avr {
+                .c-per {
+                    color: #000000;
+                }
+            }
+
+            .avr>div {
+                padding: 1rem 0.5rem;
             }
         }
     }

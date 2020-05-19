@@ -65,11 +65,11 @@ class HomePage extends Component {
       </div>)
     } else {
       return (<div className="status-container">
-      <div id="result">
-        <div class="cases"><span class="count">{this.state.craftData.data.summary.name}</span><span>World Cases</span></div>
-        <div class="cases"><span class="count">{this.state.craftData.data.summary.total_cases}</span><span>Total Cases</span></div>
-        <div class="deaths"><span class="count">{this.state.craftData.data.summary.recovered}</span><span>Recovered</span></div>
-        <div class="deaths"><span class="count">{this.state.craftData.data.summary.deaths}</span><span>Deaths</span></div>
+        <div id="result">
+          <div class="cases"><span class="count">{this.state.craftData.data.summary.name}</span><span>World Cases</span></div>
+          <div class="cases"><span class="count">{this.state.craftData.data.summary.total_cases}</span><span>Total Cases</span></div>
+          <div class="deaths"><span class="count">{this.state.craftData.data.summary.recovered}</span><span>Recovered</span></div>
+          <div class="deaths"><span class="count">{this.state.craftData.data.summary.deaths}</span><span>Deaths</span></div>
         </div>
       </div>)
     }
@@ -138,7 +138,8 @@ class HomePage extends Component {
 
       <div class="my-name" ref={ss => this.logoContainer = ss}>
         <div class="map-container">
-          <img class="map" src="https://craftww-india.co.in/Corona_tracker/images/b236c03d60d0ed87f8a8f3af02fd6d0a.svg" alt="logo" />
+          {/* <img class="map" src="https://craftww-india.co.in/Corona_tracker/images/b236c03d60d0ed87f8a8f3af02fd6d0a.svg" alt="logo" /> */}
+          <img class="map" src={logo} alt="logo" />
         </div>
       </div>
       {this.latestSummery(summary)}

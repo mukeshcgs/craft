@@ -29,9 +29,9 @@ class ProjectsPage extends Component {
 
   render() {
     return (<div class="project-container">
+      <RegionTable projects={this.props.pages} />
       <RegionBars projects={this.props.pages} />
       <RegionPiaChart projects={this.props.pages} />
-      <RegionTable projects={this.props.pages} />
     </div>)
   }
 }

@@ -10,16 +10,24 @@ class Navbar extends Component {
     super(props);
     this.logoContainer = null;
     this.logoTween = null;
+    this.state = {
+      isOn: false,
+      isToggleOn: true
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
   }
   componentDidMount() {
     this.logoTween = new TimelineLite({ paused: false }).from(this.logoContainer, 1, { y: -50, alpha: 0 })
   }
   componantDidUpdate(nextProps) {
-    if (nextProps.pages.pages) {}
+    if (nextProps.pages.pages) { }
   }
-
   componantDidUpdate() {}
-
   createListItems(data) {
     return data.pages.filter(page => {
       return page.parent === 0
@@ -30,27 +38,19 @@ class Navbar extends Component {
     })
   }
   render() {
-    //Creating SVG
-    const vertices = [[0, 20], [10, 0], [20, 20]]
-    const vertices2 = [[10, 20], [20, 0], [30, 20]]
-    function Triangle({ vertices, color }) {
-      const pathData = [
-        'M', vertices[0][0], vertices[0][1],
-        'L', vertices[1][0], vertices[1][1],
-        'L', vertices[2][0], vertices[2][1],
-        'Z',
-      ].join(' ');
-      return (<path d={pathData} fill={color} />)
-    };
 
-    return (<div class="navigation" ref={ss => this.logoContainer = ss}>
+    return (<div class="navigation" ref={ss => this.logoContainer = ss} >
       <div className="logo">
-        <img width="160px" src="https://www.craftww.com/images/craft-logo.svg"/>
+        <img width="160px" src="https://www.craftww.com/images/craft-logo.svg" />
       </div>
-      <ul>
-        <li><Link to={"/information"} >INFO</Link></li>
-        <li><Link to={"/"} >CORONA TRACKER</Link></li>
-        <li><Link to={"/statistics"} >STATS</Link></li>
+      <div id="threeLines" onClick={this.handleClick} class={this.state.isToggleOn ? ' ' : 'active'} >
+        <button id="el" ></button>
+      </div>
+      <ul class={this.state.isToggleOn ? 'closed' : 'open'}>
+        <li onClick={this.handleClick}><Link to={"/information"} >INFO</Link></li>
+        <li onClick={this.handleClick}><Link to={"/"} >CORONA TRACKER</Link></li>
+        <li onClick={this.handleClick}><Link to={"/statistics"} >STATS</Link></li>
+        <li onClick={this.handleClick}><Link to={"/india"} >INDIA</Link></li>
         {/* <li className="logo">
           <Link to={"/"} ></Link>
         </li> */}
@@ -59,7 +59,7 @@ class Navbar extends Component {
       </ul>
       {/* <ul >{this.createListItems(this.props.pages)}</ul> */}
     </div>)
-  } 
+  }
 }
 
 

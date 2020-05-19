@@ -24,23 +24,37 @@ export const getPages = () => (dispatch) => {
         })
 }
 
-
+// "url": "https://coronavirus-tracker-india-covid-19.p.rapidapi.com/api/getStatewise",
+// "headers": {
+//     "x-rapidapi-host": "coronavirus-tracker-india-covid-19.p.rapidapi.com",
+//     "x-rapidapi-key": "7d2d8cdad7msh4d195f980df65dfp1e065bjsn15b1cff29222"
+// }
+//https://rapidapi.com/189302059.anurag/api/coronavirus-tracker-india-covid-19
+const URL_INDIA = "https://coronavirus-tracker-india-covid-19.p.rapidapi.com/api/getStatewise"
+const options = {
+    headers: {
+        'x-rapidapi-host': "coronavirus-tracker-india-covid-19.p.rapidapi.com",
+        "x-rapidapi-key": "7d2d8cdad7msh4d195f980df65dfp1e065bjsn15b1cff29222"
+    }
+}
 //GET Single project
-export function getRegionData(region) {
-        // axios.get(`${URL}/${id}`)
-        //     .then((response) => {
-        //         dispatch({
-        //             type: "FETCH_SINGLE_POST_FULFILLED",
-        //             payload: response.data
-        //         })
-        //         console.log("PROJECT::");
-        //         console.log(response.data);
-        //     })
-        //     .catch((err) => {
-        //         dispatch({
-        //             type: "FETCH_SINGLE_POST_REJECTED",
-        //             payload: err
-        //         })
-        //     })
-    
+export const getIndiaData = () => (dispatch) => {
+    console.log("getPages Called");
+    dispatch({
+        type: "FETCH_INDIA"
+    });
+    return axios.get(URL_INDIA, options)
+        .then((response) => {
+            dispatch({
+                type: "FETCH_INDIA_FULFILLED",
+                payload: response
+            })
+        })
+        .catch((err) => {
+            dispatch({
+                type: "FETCH_INDIA_REJECTED",
+                payload: err
+            })
+        })
+
 }

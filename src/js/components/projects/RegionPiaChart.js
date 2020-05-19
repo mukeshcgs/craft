@@ -10,8 +10,8 @@ import LoadingSpinner from '../loadingSpinner'
 class RegionPiaChart extends Component {
     constructor(props) {
         super(props);
-        this.state = {disAmount: 12}
-      }
+        this.state = { disAmount: 12 }
+    }
     avrRegionsBars(data) {
         if (data.pages.regions) {
             let dd = Object.values(data.pages.regions);
@@ -25,10 +25,10 @@ class RegionPiaChart extends Component {
                 let avr = Math.round((a * b) / c)
 
                 xyz.push(<div class="avr" key={i} style={{ height: 250, width: 250 }}>
-                    <div style={{ height: 5 * (avr), width: 5 * avr }}>
+                    <div style={{ height: 2.5 * (avr), width: 2.5 * (avr) }}>
                         <span className="c-per">{avr}%</span>
                     </div>
-                        <span className="c-name">{dd[i].name}</span>
+                    <span className="c-name">{dd[i].name}</span>
                 </div>);
             }
             return data.pages.regions ? xyz : < LoadingSpinner />
@@ -40,7 +40,7 @@ class RegionPiaChart extends Component {
 
         return (<div class="project-list-container" >
             <div class="page-heading">Virus cases by country</div>
-            {/* <p>Increase in cases over past 24 hours — top {disAmount} countries</p> */}
+            <p>Top <b>{disAmount}</b> countries visualisation in Circles</p>
             <section className="graph pai-chart">
                 {this.avrRegionsBars(this.props.pages)}
             </section>
