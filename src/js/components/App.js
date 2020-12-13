@@ -63,10 +63,10 @@ class App extends React.Component {
       <div id="mukesh" >
         <Navbar ref={img => this.logoContainer = img} />
         {/* <Sidebar /> */}
-        <Route path="/" component={HomePage} exact />
-        <Route path="/home" component={HomePage} exact />
+        <Route path="/" component={ProjectsPage} exact />
+        <Route path="/statistics" component={ProjectsPage} exact />
         {/* <Route path="/me" component={AboutMePage} exact /> */}
-        <Route path="/statistics" component={ProjectsPage} exact projects={this.props.pages} />
+        {/* <Route path="/statistics" component={ProjectsPage} exact projects={this.props.pages} /> */}
         {/* <Route path="/:slug" component={ProjectPage} /> */}
         <Route path="/information" component={ContactPage} exact />
         <Route path="/india" component={IndiaPage} exact india={this.props.india} />

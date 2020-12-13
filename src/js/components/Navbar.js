@@ -27,7 +27,7 @@ class Navbar extends Component {
   componantDidUpdate(nextProps) {
     if (nextProps.pages.pages) { }
   }
-  componantDidUpdate() {}
+  componantDidUpdate() { }
   createListItems(data) {
     return data.pages.filter(page => {
       return page.parent === 0
@@ -41,7 +41,7 @@ class Navbar extends Component {
 
     return (<div class="navigation" ref={ss => this.logoContainer = ss} >
       <div className="logo">
-        <img width="160px" src="https://www.craftww.com/images/craft-logo.svg" />
+        COVID-19
       </div>
       <div id="threeLines" onClick={this.handleClick} class={this.state.isToggleOn ? ' ' : 'active'} >
         <button id="el" ></button>

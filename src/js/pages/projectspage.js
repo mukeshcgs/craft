@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 
 import { connect } from "react-redux"
 // import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom"
@@ -29,9 +29,9 @@ class ProjectsPage extends Component {
 
   render() {
     return (<div class="project-container">
-      <RegionTable projects={this.props.pages} />
       <RegionBars projects={this.props.pages} />
       <RegionPiaChart projects={this.props.pages} />
+      <RegionTable projects={this.props.pages} />
     </div>)
   }
 }
