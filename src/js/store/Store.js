@@ -38,7 +38,7 @@ const middleware = applyMiddleware(thunk, logger)
 
 export default createStore(
   reducer,
-    compose(middleware,window.devToolsExtension ? window.devToolsExtension() : f => f
+  compose(middleware, window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 )
 

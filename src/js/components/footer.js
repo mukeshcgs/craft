@@ -7,7 +7,7 @@ import ReactDOM from "react-dom"
 export default class Footer extends Component {
   render() {
     return (<footer>
-      <div id="copyright">© 2020 CRAFT </div>
+      <div id="copyright">© 2020 </div>
     </footer>)
   }
 }
