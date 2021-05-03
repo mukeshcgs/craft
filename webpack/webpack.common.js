@@ -4,7 +4,9 @@ const convert = require('koa-connect');
 const history = require('connect-history-api-fallback');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const commonPaths = require('./paths');
@@ -30,25 +32,21 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: commonPaths.imagesFolder,
-            },
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: commonPaths.imagesFolder,
           },
-        ],
+        }, ],
       },
       {
         test: /\.(woff2|ttf|woff|eot)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: commonPaths.fontsFolder,
-            },
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: commonPaths.fontsFolder,
           },
-        ],
+        }, ],
       },
     ],
   },
