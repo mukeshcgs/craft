@@ -47,7 +47,7 @@
     "webpack-visualizer-plugin": "^0.1.11",
     "wpapi": "^1.1.2",
     "dat.gui": "^0.7.1",
-    "lodash": "4.17.10",
+    "lodash": "4.17.21",
     "p5": "^0.9.0",
     "stats-js": "^1.0.0-alpha1"
   },
